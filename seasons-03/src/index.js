@@ -1,23 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
-
-/* function based component
-
-const App = () => {
-  window.navigator.geolocation.getCurrentPosition(
-    position => console.log(position),
-    err => console.log(err)
-  );
-  return <div>Latitude: </div>;
-};
-
-*/
-
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { lat: null, errorMessage: '' };
+  state = { lat: null, errorMessage: '' };
+
+  //gets invoked when component gets rendered the first time only.
+  componentDidMount() {
     this.getLocation();
   }
 
@@ -33,7 +21,7 @@ class App extends React.Component {
       return <div>Error: {this.state.errorMessage}</div>;
     }
     if (this.state.lat && !this.state.errorMessage) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
     return <div>Loading...</div>;
   }
