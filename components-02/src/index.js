@@ -1,7 +1,7 @@
 // 1. importing React
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import faker from 'faker';
 
 // 2. creating the components
 const App = () => {
@@ -9,17 +9,19 @@ const App = () => {
         <div className="ui container comments">
             <div className="comment">
                 <a className="avatar" href="/">
-                    <img alt="avatar" />
+                    <img alt="avatar" src={faker.image.avatar()}/>
                 </a>
                 <div className="content">
                     <a className="author" href="/">
-                        Matt
+                        {faker.name.firstName()}
                     </a>
                     <div className="metadata">
-                        <span className="date">Today at 5:42PM</span>
+                        <span className="date">
+                            {faker.date.recent().toDateString()}
+                        </span>
                     </div>
                     <div className="text">
-                        How artistic!
+                        {faker.lorem.sentence()}
                     </div>
                 </div>
             </div>
