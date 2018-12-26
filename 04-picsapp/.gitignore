@@ -12,7 +12,7 @@
 /build
 
 # api security
-src/config.js
+src/api/config.js
 
 # misc
 .DS_Store
