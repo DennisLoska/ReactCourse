@@ -19,4 +19,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementsByTagName('body')[0]);
+ReactDOM.render(<App />, document.querySelector('#root'));
