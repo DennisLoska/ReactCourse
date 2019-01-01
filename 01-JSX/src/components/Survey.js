@@ -1,12 +1,26 @@
 import React from 'react';
 
 class Survey extends React.Component {
-  state = { name: '', email: '', message: '' };
+  state = { name: '', email: '', message: '', success: false };
 
-  submitForm() {
-    console.log(this.state);
-  }
+  submitForm = event => {
+    event.preventDefault();
+    this.setState({ success: true });
+  };
+
+  formResponse = () => {
+    if (this.state.success) {
+      return (
+        <div className="form-response">Thanks, we received your request!</div>
+      );
+    } else
+      return (
+        <div className="form-response">Sorry, something went wrong there.</div>
+      );
+  };
   render() {
+    console.log(this.state);
+
     return (
       <div>
         <div className="form-description">
@@ -16,28 +30,32 @@ class Survey extends React.Component {
             possible. Just tell us what your issue is
           </p>
         </div>
-        <form onSubmit={this.submitForm()}>
+        <form onSubmit={this.submitForm}>
           <label className="form-field">Your name</label>
           <input
             className="form-field"
-            onChange={this.setState({ name: this.value })}
             type="text"
+            value={this.state.name}
+            onChange={e => this.setState({ name: e.target.value })}
           />
           <label className="form-field">E-mail</label>
           <input
             className="form-field"
-            onChange={this.setState({ email: this.props.value })}
             type="email"
+            value={this.state.email}
+            onChange={e => this.setState({ email: e.target.value })}
           />
           <label className="form-field">More information:</label>
           <textarea
             className="form-field form-textarea"
-            value={this.state.text}
+            value={this.state.message}
+            onChange={e => this.setState({ message: e.target.value })}
           />
           <button className="form-btn" type="submit">
             SEND
           </button>
         </form>
+        {this.formResponse()}
       </div>
     );
   }

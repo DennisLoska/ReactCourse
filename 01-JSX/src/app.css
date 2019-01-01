@@ -99,6 +99,12 @@ form .form-btn {
   margin: 5vh 0 7.5vh 0;
 }
 
+.form-response {
+  text-align: center;
+  height: 20vh;
+  line-height: 20vh;
+}
+
 footer {
   height: 40vh;
   background-color: #d3d3d3;
