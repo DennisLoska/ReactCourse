@@ -6,22 +6,10 @@ const VideoItem = ({ videoId, thumbnail, title, channel }) => {
   return (
     <div className="video-item">
       <div className="video-thumbnail">
-        <a
-          href={'https://www.youtube.com/' + videoId}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={thumbnail.url} alt="thumbnail" />
-        </a>
+        <img src={thumbnail.url} alt="thumbnail" />
       </div>
       <div className="video-info">
-        <a
-          href={'https://www.youtube.com/' + videoId}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="video-title">{title}</div>
-        </a>
+        <div className="video-title">{title}</div>
         <a
           href={'https://www.youtube.com/' + channel}
           target="_blank"

@@ -14,9 +14,9 @@
 
 .video-info a {
   color: black;
-  cursor: pointer;
 }
 
 .video-title {
   font-weight: bold;
+  cursor: pointer;
 }
