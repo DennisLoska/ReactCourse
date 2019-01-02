@@ -3,7 +3,10 @@ import VideoItem from './VideoItem';
 import '../css/VideoList.css';
 
 const VideoList = props => {
-  function renderItems() {
+  const showDetail = video => {
+    props.showDetail(video);
+  };
+  const renderItems = () => {
     return props.videos.map(({ id, snippet }) => {
       return (
         <VideoItem
@@ -13,10 +16,12 @@ const VideoList = props => {
           thumbnail={snippet.thumbnails.default}
           channel={snippet.channelTitle}
           title={snippet.title}
+          description={snippet.description}
+          showVideoDetail={showDetail}
         />
       );
     });
-  }
+  };
   return <div className="video-list">{renderItems()}</div>;
 };
 
