@@ -4,15 +4,15 @@ import '../css/VideoList.css';
 
 const VideoList = props => {
   function renderItems() {
-    return props.videos.map(video => {
+    return props.videos.map(({ id, snippet }) => {
       return (
         <VideoItem
-          key={video.id.videoId}
-          videoId={video.id.videoId}
-          channelId={video.snippet.channelId}
-          thumbnail={video.snippet.thumbnails.default}
-          channel={video.snippet.channelTitle}
-          title={video.snippet.title}
+          key={id.videoId}
+          videoId={id.videoId}
+          channelId={snippet.channelId}
+          thumbnail={snippet.thumbnails.default}
+          channel={snippet.channelTitle}
+          title={snippet.title}
         />
       );
     });
