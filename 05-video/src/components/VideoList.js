@@ -3,21 +3,15 @@ import VideoItem from './VideoItem';
 import '../css/VideoList.css';
 
 const VideoList = props => {
-  const showDetail = video => {
-    props.showDetail(video);
-  };
   const renderItems = () => {
-    return props.videos.map(({ id, snippet }) => {
+    return props.videos.map(video => {
+      console.log(video);
+
       return (
         <VideoItem
-          key={id.videoId}
-          videoId={id.videoId}
-          channelId={snippet.channelId}
-          thumbnail={snippet.thumbnails.default}
-          channel={snippet.channelTitle}
-          title={snippet.title}
-          description={snippet.description}
-          showVideoDetail={showDetail}
+          key={video.id.vdeoId}
+          video={video}
+          showDetail={props.showDetail}
         />
       );
     });

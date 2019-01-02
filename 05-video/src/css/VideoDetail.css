@@ -1,0 +1,16 @@
+.detail-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.detail-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+}
+
+.detail-description {
+  font-size: 1em;
+}
