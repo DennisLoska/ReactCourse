@@ -4,12 +4,17 @@
   margin: 5px;
 }
 
+.video-thumbnail {
+  cursor: pointer;
+}
+
 .video-info {
   padding-left: 10px;
 }
 
 .video-info a {
   color: black;
+  cursor: pointer;
 }
 
 .video-title {
