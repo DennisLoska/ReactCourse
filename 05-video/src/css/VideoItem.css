@@ -1,0 +1,17 @@
+.video-item {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.video-info {
+  padding-left: 10px;
+}
+
+.video-info a {
+  color: black;
+}
+
+.video-title {
+  font-weight: bold;
+}
