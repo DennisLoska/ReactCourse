@@ -7,6 +7,8 @@ class SongDetail extends React.Component {
       <div className="song-detail">
         SongDetail: <br />
         <span>{this.props.song.title}</span>
+        <br />
+        <span>{this.props.song.length}</span>
       </div>
     );
   }
