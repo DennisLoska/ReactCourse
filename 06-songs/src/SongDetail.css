@@ -1,0 +1,10 @@
+.song-detail {
+  width: 60vw;
+  height: 25vh;
+  font-size: 4em;
+  margin: 15px;
+  padding: 15px;
+  font-family: roboto;
+  color: white;
+  background-color: #333;
+}
