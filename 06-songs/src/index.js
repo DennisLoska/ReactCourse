@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SongDetail from './SongDetail';
 import SongList from './SongList';
+import './index.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex' }} className="songs-container">
         <div className="song-list">
           <SongList songs={this.songs} selectSong={this.selectSong} />
         </div>

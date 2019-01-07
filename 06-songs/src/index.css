@@ -1,0 +1,12 @@
+@media only screen and (max-width: 600px) {
+  .songs-container {
+    flex-direction: column;
+  }
+  .song-detail,
+  .song-list {
+    width: 93vw;
+    padding: 5px;
+    margin: 0;
+    font-size: 1.5em;
+  }
+}
