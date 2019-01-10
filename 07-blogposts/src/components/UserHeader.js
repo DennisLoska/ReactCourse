@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 
 class UserHeader extends React.Component {
   componentDidMount() {
-    this.props.fetchUser(this.props.userId);
+    const { fetchUser, userId } = this.props;
+    fetchUser(userId);
   }
   render() {
-    if (!this.props.user) return null;
-    return <div className="header">{this.props.user.name}</div>;
+    const { user } = this.props;
+    if (!user) return null;
+    return <div className="header">{user.name}</div>;
   }
 }
 
