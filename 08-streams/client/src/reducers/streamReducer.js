@@ -10,7 +10,7 @@ import _ from 'lodash';
 export default (state = {}, { type, payload }) => {
   switch (type) {
     case FETCH_STREAMS:
-      return { ...state, ..._.mapKeys(payload, payload.id) };
+      return { ...state, ..._.mapKeys(payload, 'id') };
     case FETCH_STREAM:
       return { ...state, [payload.id]: payload };
     case CREATE_STREAM:
