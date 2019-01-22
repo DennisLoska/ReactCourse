@@ -9,6 +9,11 @@
       "title": "Coding streams",
       "description": "This is an awesome stream.",
       "id": 2
+    },
+    {
+      "title": "Stream of interesting things!",
+      "description": "A description",
+      "id": 3
     }
   ]
 }
