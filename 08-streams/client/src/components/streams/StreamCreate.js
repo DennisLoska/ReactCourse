@@ -26,7 +26,6 @@ class StreamCreate extends React.Component {
   };
 
   onSubmit = formValues => {
-    console.log(formValues);
     this.props.createStream(formValues);
   };
   render() {
@@ -56,7 +55,7 @@ const validate = formValues => {
 };
 
 const mapStateToProps = state => {
-  return { streams: state.stream };
+  return { streams: state.streams };
 };
 
 const formWrapped = reduxForm({

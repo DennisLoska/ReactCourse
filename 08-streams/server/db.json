@@ -14,6 +14,11 @@
       "title": "Stream of interesting things!",
       "description": "A description",
       "id": 3
+    },
+    {
+      "title": "New Stream",
+      "description": "Should be no.4",
+      "id": 4
     }
   ]
 }

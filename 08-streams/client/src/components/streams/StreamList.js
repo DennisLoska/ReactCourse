@@ -29,7 +29,7 @@ class StreamList extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return { streams: state.stream };
+  return { streams: state.streams };
 };
 
 export default connect(
