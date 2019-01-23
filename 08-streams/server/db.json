@@ -19,6 +19,47 @@
       "title": "New Stream",
       "description": "Should be no.4",
       "id": 4
+    },
+    {
+      "title": "Number 5",
+      "description": "with id",
+      "userId": null,
+      "id": 5
+    },
+    {
+      "title": "Number 6",
+      "description": "and so it goes",
+      "userId": null,
+      "id": 6
+    },
+    {
+      "title": "Now it should be a users stream",
+      "description": "lets test this out",
+      "id": 7
+    },
+    {
+      "title": "Now it should be a users stream",
+      "description": "lets test this out",
+      "id": 8
+    },
+    {
+      "title": "My stream",
+      "description": "form Dennis",
+      "userId": {
+        "isSignedIn": true
+      },
+      "id": 9
+    },
+    {
+      "title": "And another Stream",
+      "description": "wuhooo",
+      "id": 10
+    },
+    {
+      "title": "The one and only",
+      "description": "the successful stream",
+      "userId": "117520884443091361579",
+      "id": 11
     }
   ]
 }
