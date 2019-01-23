@@ -20,8 +20,7 @@ class StreamEdit extends React.Component {
     this.props.fetchStream(this.props.match.params.id);
   }
 
-  renderEdit() {
-    console.log(this.props);
+  render() {
     if (this.props.stream) {
       return (
         <div>
@@ -31,10 +30,6 @@ class StreamEdit extends React.Component {
         </div>
       );
     } else return <div>Loading...</div>;
-  }
-
-  render() {
-    return this.renderEdit();
   }
 }
 
