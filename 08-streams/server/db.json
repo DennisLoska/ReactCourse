@@ -1,65 +1,31 @@
 {
   "streams": [
     {
-      "title": "Stream 1",
+      "title": "Stream One",
       "description": "The first Stream.",
       "id": 1
     },
     {
-      "title": "Coding streams",
-      "description": "This is an awesome stream.",
-      "id": 2
-    },
-    {
-      "title": "Stream of interesting things!",
-      "description": "A description",
-      "id": 3
-    },
-    {
-      "title": "New Stream",
-      "description": "Should be no.4",
-      "id": 4
-    },
-    {
-      "title": "Number 5",
-      "description": "with id",
-      "userId": null,
-      "id": 5
-    },
-    {
-      "title": "Number 6",
-      "description": "and so it goes",
-      "userId": null,
-      "id": 6
-    },
-    {
-      "title": "Now it should be a users stream",
-      "description": "lets test this out",
+      "title": "Now it should be a user's stream",
+      "description": "lets test this out.",
       "id": 7
     },
     {
-      "title": "Now it should be a users stream",
-      "description": "lets test this out",
+      "title": "Another stream",
+      "description": "Another description of a stream.",
       "id": 8
     },
     {
-      "title": "My stream",
-      "description": "form Dennis",
-      "userId": {
-        "isSignedIn": true
-      },
-      "id": 9
-    },
-    {
-      "title": "And another Stream",
-      "description": "wuhooo",
-      "id": 10
-    },
-    {
-      "title": "The one and only",
-      "description": "the successful stream",
+      "title": "A user's stream using Google OAuth",
+      "description": "This is one of many streams.",
       "userId": "117520884443091361579",
       "id": 11
+    },
+    {
+      "title": "Programmatic Navigation",
+      "description": "This should be a new stream after creating it.",
+      "userId": "117520884443091361579",
+      "id": 12
     }
   ]
 }
