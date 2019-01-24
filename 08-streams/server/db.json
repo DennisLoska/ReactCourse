@@ -26,6 +26,12 @@
       "description": "This should be a new stream after creating it.",
       "userId": "117520884443091361579",
       "id": 12
+    },
+    {
+      "title": "New Stream",
+      "description": "Refactored StreamForm in action.",
+      "userId": "117520884443091361579",
+      "id": 13
     }
   ]
 }
