@@ -29,9 +29,14 @@
     },
     {
       "title": "New Stream",
-      "description": "Refactored StreamForm in action.",
+      "description": "Refactored StreamForm in action",
       "userId": "117520884443091361579",
       "id": 13
+    },
+    {
+      "title": "Another Stream",
+      "description": "Created after StreamEdit and back",
+      "id": 14
     }
   ]
 }

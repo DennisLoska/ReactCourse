@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchStream } from '../../actions';
+import { fetchStream, updateStream } from '../../actions';
+import StreamForm from './Streamform';
 
 class StreamEdit extends React.Component {
   // DO NOT DO THIS because of ownProps in mapStateToProps function direct access to index
@@ -20,13 +21,25 @@ class StreamEdit extends React.Component {
     this.props.fetchStream(this.props.match.params.id);
   }
 
+  onSubmit = formValues => {
+    const { stream } = this.props;
+    this.props.updateStream(stream.id, formValues);
+  };
+
   render() {
-    if (this.props.stream) {
+    const { stream } = this.props;
+    if (stream) {
       return (
         <div>
-          StreamEdit
-          <div> {this.props.stream.title}</div>
-          <div> {this.props.stream.description}</div>
+          <h3>Edit your stream:</h3>
+          <StreamForm
+            callback={this.onSubmit}
+            title={stream.title}
+            initialValues={{
+              title: stream.title,
+              description: stream.description
+            }}
+          />
         </div>
       );
     } else return <div>Loading...</div>;
@@ -41,5 +54,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(
   mapStateToProps,
-  { fetchStream }
+  { fetchStream, updateStream }
 )(StreamEdit);
