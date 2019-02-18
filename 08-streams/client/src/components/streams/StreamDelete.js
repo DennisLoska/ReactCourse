@@ -4,6 +4,13 @@ import { fetchStream } from '../../actions';
 import Modal from '../Modal';
 
 class StreamDelete extends React.Component {
+  actions = (
+    <div>
+      <button className="ui button negative">Delete</button>
+      <button className="ui button">Cancel</button>
+    </div>
+  );
+
   componentDidMount() {
     this.props.fetchStream(this.props.match.params.id);
   }
@@ -13,7 +20,11 @@ class StreamDelete extends React.Component {
       return (
         <div>
           StreamDelete
-          <Modal />
+          <Modal
+            title="Delete Stream"
+            content="Are you sure you want to delete this stream?"
+            actions={this.actions}
+          />
         </div>
       );
     } else return <div>Loading...</div>;
