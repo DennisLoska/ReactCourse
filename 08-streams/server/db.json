@@ -17,7 +17,7 @@
     },
     {
       "title": "A user's stream using Google OAuth",
-      "description": "This is one of many streams.",
+      "description": "This is one of many streams here.",
       "userId": "117520884443091361579",
       "id": 11
     },
@@ -29,7 +29,7 @@
     },
     {
       "title": "New Stream",
-      "description": "Refactored StreamForm in action",
+      "description": "Refactored StreamForm in action and finished REST",
       "userId": "117520884443091361579",
       "id": 13
     },
@@ -37,6 +37,12 @@
       "title": "Another Stream",
       "description": "Created after StreamEdit and back",
       "id": 14
+    },
+    {
+      "title": "DN Stream",
+      "description": "travel the world",
+      "userId": "111278875036218628367",
+      "id": 15
     }
   ]
 }

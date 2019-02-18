@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchStream } from '../../actions';
+import Modal from '../Modal';
 
 class StreamDelete extends React.Component {
   componentDidMount() {
@@ -12,8 +13,7 @@ class StreamDelete extends React.Component {
       return (
         <div>
           StreamDelete
-          <div> {this.props.stream.title}</div>
-          <div> {this.props.stream.description}</div>
+          <Modal />
         </div>
       );
     } else return <div>Loading...</div>;
