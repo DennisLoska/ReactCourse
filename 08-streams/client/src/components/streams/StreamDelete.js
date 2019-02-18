@@ -5,10 +5,10 @@ import Modal from '../Modal';
 
 class StreamDelete extends React.Component {
   actions = (
-    <div>
+    <React.Fragment>
       <button className="ui button negative">Delete</button>
       <button className="ui button">Cancel</button>
-    </div>
+    </React.Fragment>
   );
 
   componentDidMount() {
