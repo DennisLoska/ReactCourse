@@ -3,8 +3,8 @@ import LanguageContext from '../contexts/LanguageContext';
 import ColorContext from '../contexts/ColorContext';
 
 class Button extends React.Component {
-  renderValue(value) {
-    return value === 'english' ? 'Submit' : 'Senden';
+  renderValue(language) {
+    return language === 'english' ? 'Submit' : 'Senden';
   }
 
   render() {
@@ -13,7 +13,7 @@ class Button extends React.Component {
         {color => (
           <button style={{ backgroundColor: color }}>
             <LanguageContext.Consumer>
-              {value => this.renderValue(value)}
+              {({ language }) => this.renderValue(language)}
             </LanguageContext.Consumer>
           </button>
         )}
