@@ -49,6 +49,12 @@
       "description": "new Stream",
       "userId": "111278875036218628367",
       "id": 16
+    },
+    {
+      "title": "Live from the event",
+      "description": "A livestream of this current event.",
+      "userId": "111278875036218628367",
+      "id": 17
     }
   ]
 }
