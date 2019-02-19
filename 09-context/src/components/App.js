@@ -1,6 +1,7 @@
 import React from 'react';
 import UserCreate from './UserCreate';
 import Languagecontext from '../contexts/LanguageContext';
+import ColorContext from '../contexts/ColorContext';
 
 class App extends React.Component {
   state = { language: 'english' };
@@ -8,7 +9,9 @@ class App extends React.Component {
   renderField = () => {
     return (
       <Languagecontext.Provider value={this.state.language}>
-        <UserCreate />
+        <ColorContext.Provider value="red">
+          <UserCreate />
+        </ColorContext.Provider>
       </Languagecontext.Provider>
     );
   };
