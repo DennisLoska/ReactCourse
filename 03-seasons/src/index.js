@@ -1,35 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
 import Spinner from './Spinner';
-class App extends React.Component {
-  state = { lat: null, errorMessage: '' };
 
-  //gets invoked when component gets rendered the first time only.
-  componentDidMount() {
-    this.getLocation();
-  }
+const App = () => {
+  const [lat, setLat] = useState(null);
+  const [error, setError] = useState('');
 
-  getLocation() {
+  useEffect(() => {
     window.navigator.geolocation.getCurrentPosition(
-      position => this.setState({ lat: position.coords.latitude }),
-      err => this.setState({ errorMessage: err.message })
+      position => setLat(position.coords.latitude),
+      err => setError(err.message)
     );
-  }
+  }, []);
 
-  renderContent() {
-    if (!this.state.lat && this.state.errorMessage) {
-      return <div>Error: {this.state.errorMessage}</div>;
-    }
-    if (this.state.lat && !this.state.errorMessage) {
-      return <SeasonDisplay lat={this.state.lat} />;
-    }
-    return <Spinner message="Please accept the location request" />;
-  }
+  let content;
+  if (!lat && error) content = <div>Error: {error}</div>;
+  else if (lat && !error) content = <SeasonDisplay lat={lat} />;
+  else content = <Spinner message="Please accept the location request" />;
 
-  render() {
-    return <div className="demo-wrapper">{this.renderContent()}</div>;
-  }
-}
+  return <div className="demo-wrapper">{content}</div>;
+};
 
 ReactDOM.render(<App />, document.querySelector('#root'));
