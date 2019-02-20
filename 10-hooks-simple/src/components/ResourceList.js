@@ -17,7 +17,7 @@ const ResourceList = props => {
   return (
     <ul>
       {resources.map(record => (
-        <li>{record.title}</li>
+        <li key={record.id}>{record.title}</li>
       ))}
     </ul>
   );
